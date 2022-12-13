@@ -2,17 +2,14 @@
 
 Fired when the client sends a message.
 
-!!! warning
-    This event also takes into account commands.
-
 ## Usage
 
 ```lua
-function onMessage(Client: clientObj, EMsgType: type, string: message)
-    print(string.format("Client %s has said \"%s\" in EMsgType %s", client:getname(), message, msgType))
+function onMessage(Client: cl, msgtype: type, string: msg)
+    print(string.format("Client %s has said \"%s\" in EMsgType %s", cl:getname(), msg, msgtype))
 
     -- Protip: You can change the EMsgType here.
-    return type, message
+    return msgtype, message
 end
 ```
 

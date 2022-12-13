@@ -464,13 +464,13 @@ Applies velocity to a client.
 
 ``:setvelocity`` modes:
 
-| Bitflag    | Description                          |
-|------------|--------------------------------------|
-| PVC_ADDALL | Adds to the velocity of the player   |
-| PVC_SETX   | Sets the player's X velocity         |
-| PVC_SETY   | Sets the player's Y velocity         |
-| PVC_SETZ   | Sets the player's Z velocity         |
-| PVC_SETALL | Sets the player's velocity           |
+| Bitflag           | Description                          |
+|-------------------|--------------------------------------|
+| CPE_VELCTL_ADDALL | Adds to the velocity of the player   |
+| CPE_VELCTL_SETX   | Sets the player's X velocity         |
+| CPE_VELCTL_SETY   | Sets the player's Y velocity         |
+| CPE_VELCTL_SETZ   | Sets the player's Z velocity         |
+| CPE_VELCTL_SETALL | Sets the player's velocity           |
 
 Since these are bitflags, you can use bitwise operations to combine setting and adding.
 
@@ -517,6 +517,14 @@ client:sendbulk(BulkBlockUpdate: bulk)
 
 Sends the client a BulkBlockUpdate.
 
+### client:particle
+
+```lua
+client:particle(int: id, Vector: position, Vector: origin)
+```
+
+Spawns a particle for a new client.
+
 ### Cuboid: client:newcuboid
 
 ```lua
@@ -555,6 +563,12 @@ client:teleport(Vector: position, Angle: rotation)
 ```
 
 Teleports the client.
+
+```lua
+client:teleport(int: flags, Vector: position, Angle: rotation)
+```
+
+Teleports the client using ExtEntityTeleport CPE packet. See flags <a href="https://wiki.vg/Classic_Protocol_Extension#ExtEntityTeleport" rel="noreferer">here</a>.
 
 ### client:kick
 

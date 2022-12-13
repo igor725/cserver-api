@@ -118,6 +118,22 @@ world:gettexpack()
 
 Returns the world's texture pack.
 
+### lightuserdata, int: world:getaddr
+
+```lua
+world:getaddr()
+```
+
+Returns the world's block array and its size. This function can be used to directly access an block array via LuaJIT's ffi.
+
+### int: world:getseed
+
+```lua
+world:getseed()
+```
+
+Returns the world's seed.
+
 ### int: world:getplayercount
 
 ```lua
@@ -297,7 +313,7 @@ If true, prevents the WORLD_FLAG_MODIFIED flag from being set. This means that `
 
 ## Functions
 
-### world:update
+### boolean: world:update
 
 ```lua
 world:update()

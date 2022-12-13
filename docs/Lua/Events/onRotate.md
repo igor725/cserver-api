@@ -9,8 +9,8 @@ Fired when a client rotates.
 ## Usage
 
 ```lua
-function onRotate(Client: clientObj)
-    print(string.format("Client %s has rotated!", client:getname()))
+function onRotate(Client: cl)
+    print(string.format("Client %s has rotated!", cl:getname()))
 end 
 ```
 

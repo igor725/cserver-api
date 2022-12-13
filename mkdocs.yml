@@ -1,7 +1,7 @@
-site_dir: /usr/local/nginx/docs/cs-lua
+site_dir: /usr/local/nginx/docs/
 site_name: CServer Lua Plugin Documentation
 site_author: quadruple, igor725
-site_url: https://docs.igvx.ru/lua/
+site_url: https://docs.igvx.ru/
 repo_url: https://github.com/igor725/cserver-lua-api
 
 theme:

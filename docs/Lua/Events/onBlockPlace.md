@@ -10,7 +10,7 @@ Fired when a client places a block.
 ## Usage
 
 ```lua
-function onBlockPlace(Client: clientObj, Vector: position, int: blockId)
-    print(string.format("Player %s has placed id %s at %s", client:getname(), id, position))
+function onBlockPlace(Client: cl, Vector: pos, int: id)
+    print(string.format("Player %s has placed id %s at %s", cl:getname(), id, pos))
 end
 ```

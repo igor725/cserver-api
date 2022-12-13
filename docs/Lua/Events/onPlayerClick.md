@@ -5,12 +5,12 @@ Fired every time the player clicks.
 ## Usage
 
 ```lua
-function onPlayerClick(Client: clientObj, PlayerClickEvent: playerClickEvent)
-    client:chat(string.format("You clicked at %s button %s", playerClickEvent.position, playerClickEvent.button))
+function onPlayerClick(Client: cl, table: pclick)
+    cl:chat(string.format("You clicked at %s button %s", pclick.position, pclick.button))
 end
 ```
 
-## Player Click Event
+## Player Click Table
 
 | Field     | Type      | Description                                               |
 |-----------|-----------|-----------------------------------------------------------|

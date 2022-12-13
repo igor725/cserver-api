@@ -9,4 +9,4 @@ Base structure for rotation.
 angle(float: pitch, float: yaw)
 ```
 
-Returns a new angle.
+Returns a new Angle.

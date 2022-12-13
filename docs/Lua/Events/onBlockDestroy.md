@@ -8,8 +8,8 @@ Fired when a client destroys a block.
 ## Usage
 
 ```lua
-function onBlockDestroy(Client: clientObj, Vector: position, int: blockId)
-    print(string.format("Player %s has broken block at %s", client:getname(), position))
+function onBlockDestroy(Client: cl, Vector: position, int: blockId)
+    print(string.format("Player %s has broken block at %s", cl:getname(), position))
 end
 ```
 

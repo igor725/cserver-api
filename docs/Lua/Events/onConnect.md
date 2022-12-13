@@ -11,8 +11,8 @@ Fired on an incoming connection.
 ## Usage
 
 ```lua
-function onConnect(Client: clientObj)
-    client:chat(string.format("Incoming connection: %s", client:getaddr()))
+function onConnect(Client: cl)
+    cl:chat(string.format("Incoming connection: %s", cl:getaddr()))
 end
 ```
 

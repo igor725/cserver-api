@@ -9,8 +9,8 @@ Fired when a client moves.
 ## Usage
 
 ```lua
-function onMove(Client: clientObj)
-    print(string.format("Client %s has moved!", client:getname()))
+function onMove(Client: cl)
+    print(string.format("Client %s has moved!", cl:getname()))
 end 
 ```
 

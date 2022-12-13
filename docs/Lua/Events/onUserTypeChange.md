@@ -3,12 +3,12 @@
 Fired when a user's type changes.
 
 !!! note
-    Seems to be used when a player gets opped or deopped.
+    Used when a player gets opped or deopped.
 
 ## Usage
 
 ```lua
-function onUserTypeChange(Client: clientObj)
-    client:chat(string.format("Your user type has changed OP: %s", client:isop()))
+function onUserTypeChange(Client: cl)
+    cl:chat(string.format("Your user type has changed OP: %s", cl:isop()))
 end
 ```

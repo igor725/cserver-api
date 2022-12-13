@@ -34,9 +34,7 @@ ECType:
 | Config Type       |
 |-------------------|
 | CONFIG_TYPE_BOOL  |
-| CONFIG_TYPE_INT32 |
-| CONFIG_TYPE_INT16 |
-| CONFIG_TYPE_INT8  |
+| CONFIG_TYPE_INT   |
 | CONFIG_TYPE_STR   |
 
 ### string, string: config.error
