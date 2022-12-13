@@ -5,7 +5,7 @@
 ### BulkBlockUpdate:setautosend
 
 ```lua
-bulkblockupdate:setautosend(bool: autoSend)
+bulkblockupdate:setautosend(boolean: autoSend)
 ```
 
 If true, BulkBlockUpdate packet will be sent when it overflows(over 256 calls to ``bulkblockupdate:add``).

@@ -5,19 +5,19 @@
 
 ## Fields
 
-### number: x
+### int: x
 
 ```lua
 vector.x
 ```
 
-### number: y
+### int: y
 
 ```lua
 vector.y
 ```
 
-### number: z
+### int: z
 
 ```lua
 vector.z
@@ -25,7 +25,7 @@ vector.z
 
 ## Functions
 
-### bool: vector:iszero
+### boolean: vector:iszero
 
 ```lua
 vector:iszero()

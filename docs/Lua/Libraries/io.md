@@ -1,5 +1,5 @@
 # io
-The plugin's io library almost identical to pure Lua [5.1](https://www.lua.org/manual/5.1/manual.html#5.7)/[5.2](https://www.lua.org/manual/5.2/manual.html#6.8)/[5.3](https://www.lua.org/manual/5.3/manual.html#6.8)/[5.4](https://www.lua.org/manual/5.4/manual.html#6.8) implementation.
+The plugin's ``io`` library almost identical to pure Lua [5.1](https://www.lua.org/manual/5.1/manual.html#5.7)/[5.2](https://www.lua.org/manual/5.2/manual.html#6.8)/[5.3](https://www.lua.org/manual/5.3/manual.html#6.8)/[5.4](https://www.lua.org/manual/5.4/manual.html#6.8) implementation.
 
 ## Blocked standard implementations
 

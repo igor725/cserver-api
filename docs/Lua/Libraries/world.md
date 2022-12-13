@@ -1,5 +1,5 @@
 # world
-Allows you to interact with the world.
+Allows you to interact with the worlds.
 
 ## Functions
 

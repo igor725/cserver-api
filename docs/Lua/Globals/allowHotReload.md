@@ -6,6 +6,7 @@ Allows/disallows hot script reloading.
 	This function is deprectaed, please use [setInfo](./setInfo.md).
 
 ## Usage
+
 ```lua
 allowHotReload(boolean: allow)
 ```

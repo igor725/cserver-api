@@ -74,7 +74,7 @@ function onStart()
 
 	mycfg:save(not mycfg:load())
 	print('Config string:', mycfg:get('my-key-str'))
-	print('Config bool:', mycfg:get('my-key-bool'))
+	print('Config boolean:', mycfg:get('my-key-bool'))
 	print('Config short:', mycfg:get('my-key-i16'))
 end
 ```

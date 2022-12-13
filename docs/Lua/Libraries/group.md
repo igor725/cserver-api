@@ -11,7 +11,7 @@ local groupId = group.add(string: name, int: rank)
 
 Adds a new group, returning it's id. Lower-number ranks are listed before higher-number ranks.
 
-### bool: group.remove
+### boolean: group.remove
 
 ```lua
 group.remove(int: groupId)

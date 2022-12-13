@@ -1,20 +1,23 @@
 site_dir: /usr/local/nginx/docs/
-site_name: CServer Lua Plugin Documentation
+site_name: CServer API Documentation
 site_author: quadruple, igor725
 site_url: https://docs.igvx.ru/
 repo_url: https://github.com/igor725/cserver-lua-api
 
 theme:
+  features:
+    - navigation.tabs
+    - header.autohide
   name: material
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
     - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
 
 markdown_extensions:
   - admonition
@@ -30,6 +33,6 @@ plugins:
           name: English
           build: true
         ru:
-          site_name: Документация по Lua плагину для CServer
+          site_name: Документация по CServer API
           name: Russian
           build: true

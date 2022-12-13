@@ -6,67 +6,87 @@ Creation and interaction with custom blocks.
 ### Block: block.define
 
 ```lua
-block.define(Table: blockDefinition)
+block.define(table: blockDefinition)
 ```
 
 Returns a new block with the defined parameters.
 
-blockDefinition table structure:
+### boolean: block.isvalid
+
+```lua
+block.isvalid(int: blockId)
+```
+
+Returns whether or not the block is valid.
+
+### int: block.fallbackfor
+
+```lua
+block.fallbackfor(int: blockId)
+```
+
+Returns the fallback id for the block.
+
+### BulkBlockUpdate: block.bulk
+
+```lua
+block.bulk()
+```
+
+```lua
+block.bulk([World: worldObj, boolean: autoSend])
+```
+
+Creates a new BulkBlockUpdate object. If given, will automatically set the world and/or autoSend.
+
+## blockDefinition table structure
 
 | Parameter     | Description                                                   |
 |---------------|---------------------------------------------------------------|
-| name          | String: The name of your block.                               |
-| fallback      | Int: ID of the fallback block(for vanilla clients).           |
-| extended      | Boolean: Whether or not the block is extended.                |
-| param         | Table: List of block parameters.                              |
+| name          | string: The name of your block.                               |
+| fallback      | int: ID of the fallback block (for vanilla clients).          |
+| extended      | boolean: Whether or not the block is extended.                |
+| param         | table: List of block parameters.                              |
 
-For non-extended blocks, the follow params table is used:
+## General parameters for non-extended and extended blocks
 
-| Parameter     | Description                                                       |
-|---------------|-------------------------------------------------------------------|
-| solidity      | EBlockSolidity: Collision mode for this block.                    |
-| movespeed     | Byte: Speed modifier of the block. Look at DefineBlock [movespeed](https://wiki.vg/Classic_Protocol_Extension#DefineBlock_Packet) for more info |
-| toptex        | Texture ID for the top of the block.                              |
-| sidetex       | Texture ID for the side of the block.                             |
-| bottomtex     | Texture ID for the bottom of the block.                           |
-| transmitsLight| Whether or not this block allows sunlight to go through.          |
-| walksound     | EBlockSounds: Sound the block makes when walked on.               |
-| fullbright    | Whether or not this block affected by shadows.                    |
-| shape         | 0 - Sprite; 1 -> 16 Height of the block.                          |
-| drawType      | EBlockDrawTypes: The way the block is drawn client-side.          |
-| fogdensity    | Density of fog while the client's camera is inside the block.     |
-| fogR          | R Color of the fog while the client's camera is inside the block. |
-| fogG          | G Color of the fog while the client's camera is inside the block. |
-| fogB          | B Color of the fog while the client's camera is inside the block. |
+| Parameter     | Description                                                             |
+| solidity      | EBlockSolidity: Collision mode for this block.                          |
+| movespeed     | int: Speed modifier of the block. Look at DefineBlock [movespeed](https://wiki.vg/Classic_Protocol_Extension#DefineBlock_Packet) for more info |
+| toptex        | int: Texture ID for the top of the block.                               |
+| bottomtex     | int: Texture ID for the bottom of the block.                            |
+| transmitsLight| boolean: Whether or not this block allows sunlight to go through.       |
+| walksound     | EBlockSounds: Sound the block makes when walked on.                     |
+| fullbright    | boolean: Whether or not this block affected by shadows.                 |
+| drawType      | EBlockDrawTypes: The way the block is drawn client-side.                |
+| fogdensity    | int: Density of fog while the client's camera is inside the block.      |
+| fogR          | int: R Color of the fog while the client's camera is inside the block.  |
+| fogG          | int: G Color of the fog while the client's camera is inside the block.  |
+| fogB          | int: B Color of the fog while the client's camera is inside the block.  |
 
-For extended blocks, the following params table is used:
+## For non-extended blocks, the follow params is used
 
-| Parameter     | Description                                                       |
-|---------------|-------------------------------------------------------------------|
-| solidity      | EBlockSolidity: Collision mode for this block.                    |
-| movespeed     | Byte: Speed modifier of the block. Look at DefineBlock [movespeed](https://wiki.vg/Classic_Protocol_Extension#DefineBlock_Packet) for more info |
-| toptex        | Texture ID for the top of the block.                              |
-| lefttex       | Texture ID for the left side of the block.                        |
-| righttex      | Texture ID for the right side of the block.                       |
-| fronttex      | Texture ID for the front of the block.                            |
-| backtex       | Texture ID for the back of the block.                             |
-| bottomtex     | Texture ID for the bottom of the block.                           |
-| transmitsLight| Whether or not this block allows sunlight to go through.          |
-| walksound     | EBlockSounds: Sound the block makes when walked on.               |
-| fullbright    | Whether or not this block affected by shadows.                    |
-| minx          | Minimum X coordinate in pixels. Values between 0 and 15 allowed.  |
-| miny          | Minimum Y coordinate in pixels. Values between 0 and 15 allowed.  |
-| minz          | Minimum Z coordinate in pixels. Values between 0 and 15 allowed.  |
-| maxx          | Maximum X coordinate in pixels. Values between 0 and 15 allowed.  |
-| maxy          | Maximum Y coordinate in pixels. Values between 0 and 15 allowed.  |
-| maxz          | Maximum Z coordinate in pixels. Values between 0 and 15 allowed.  |
-| drawType      | EBlockDrawTypes: The way the block is drawn client-side.          |
-| fogdensity    | Density of fog while the client's camera is inside the block.     |
-| fogR          | R Color of the fog while the client's camera is inside the block. |
-| fogG          | G Color of the fog while the client's camera is inside the block. |
-| fogB          | B Color of the fog while the client's camera is inside the block. |
+| Parameter     | Description                                                             |
+|---------------|-------------------------------------------------------------------------|
+| sidetex       | int: Texture ID for the side of the block.                              |
+| shape         | int: 0 - Sprite; 1 -> 16 Height of the block.                           |
 
-EBlockSolidity:
+## For extended blocks, the following params is used
+
+| Parameter     |      Description                                                       |
+|---------------|------------------------------------------------------------------------|
+| lefttex       | int: Texture ID for the left side of the block.                        |
+| righttex      | int: Texture ID for the right side of the block.                       |
+| fronttex      | int: Texture ID for the front of the block.                            |
+| backtex       | int: Texture ID for the back of the block.                             |
+| minx          | int: Minimum X coordinate in pixels. Values between 0 and 15 allowed.  |
+| miny          | int: Minimum Y coordinate in pixels. Values between 0 and 15 allowed.  |
+| minz          | int: Minimum Z coordinate in pixels. Values between 0 and 15 allowed.  |
+| maxx          | int: Maximum X coordinate in pixels. Values between 0 and 15 allowed.  |
+| maxy          | int: Maximum Y coordinate in pixels. Values between 0 and 15 allowed.  |
+| maxz          | int: Maximum Z coordinate in pixels. Values between 0 and 15 allowed.  |
+
+## EBlockSolidity
 
 | Name          | Description                                                       |
 |---------------|-------------------------------------------------------------------|
@@ -74,7 +94,7 @@ EBlockSolidity:
 | BDSOL_SWIM    | Liquid collision(can swim through the block: water, lava etc.)    |
 | BDSOL_SOLID   | Block collision(can walk on the block).                           |
 
-EBlockSounds:
+## EBlockSounds
 
 | Name          |
 |---------------|
@@ -89,40 +109,12 @@ EBlockSounds:
 | BDSND_SAND    |
 | BDSND_SNOW    |
 
-EBlockDrawTypes:
+## EBlockDrawTypes
 
-| Name          | Description                                                   |
-|-------------------|-----------------------------------------------------------|
-| BDDRW_OPAQUE      | Opaque block.                                             |
-| BDDRW_TRANSPARENT | Transparent with face culling of same neighbour.          |
-| BDDRW_TRANSPARENT2| Transparent with no face culling of same neighbour.       |
-| BDDRW_TRANSLUCENT | Transparent and shaded by texture(water, ice etc.)        |
-| BDDRW_GAS         | Fully transparent(air).                                   |
-
-### bool: block.isvalid
-
-```lua
-block.isvalid(Number: blockId)
-```
-
-Returns whether or not the block is valid.
-
-### int: block.fallbackfor
-
-```lua
-block.fallbackfor(Number: blockId)
-```
-
-Returns the fallback id for the block.
-
-### BulkBlockUpdate: block.bulk
-
-```lua
-block.bulk()
-```
-
-```lua
-block.bulk([World: worldObj, bool: autoSend])
-```
-
-Creates a new BulkBlockUpdate object. If given, will automatically set the world and/or autoSend.
+| Name               | Description                                         |
+|--------------------|-----------------------------------------------------|
+| BDDRW_OPAQUE       | Opaque block.                                       |
+| BDDRW_TRANSPARENT  | Transparent with face culling of same neighbour.    |
+| BDDRW_TRANSPARENT2 | Transparent with no face culling of same neighbour. |
+| BDDRW_TRANSLUCENT  | Transparent and shaded by texture (water, ice etc.) |
+| BDDRW_GAS          | Fully transparent(air).                             |

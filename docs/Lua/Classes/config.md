@@ -18,7 +18,7 @@ config:set(string: configKey, value: configValue)
 
 Sets the given config key to the given value.
 
-### bool: config:load
+### boolean: config:load
 
 ```lua
 config:load()
@@ -26,10 +26,10 @@ config:load()
 
 Returns whether or not the config loaded successfully.
 
-### bool: config:save
+### boolean: config:save
 
 ```lua
-config:save(bool: force)
+config:save(boolean: force)
 ```
 
 Returns whether or not the config saved successfully. If ``force`` is true, it forces the save, even if its the same as the default config.
@@ -76,7 +76,7 @@ function onStart()
 
 	mycfg:save(not mycfg:load())
 	print('Config string:', mycfg:get('my-key-str'))
-	print('Config bool:', mycfg:get('my-key-bool'))
+	print('Config boolean:', mycfg:get('my-key-bool'))
 	print('Config short:', mycfg:get('my-key-i16'))
 end
 ```

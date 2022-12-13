@@ -10,7 +10,7 @@ world:getname()
 
 Returns the worlds's name.
 
-### bool: world:getspawn
+### boolean: world:getspawn
 
 ```lua
 world:getspawn()
@@ -33,7 +33,7 @@ Return's the 1D location of the block at ``ShortVector``.
 
 Equation: ``(((ShortVector.y) * World.Length + (ShortVector.z)) * World.Width + (ShortVector.x))``
 
-### bool:           world:getdimensions
+### boolean:           world:getdimensions
 ### Short Vector:   world:getdimensions
 
 ```lua
@@ -54,7 +54,7 @@ world:getblock(Vector: pos)
 
 Returns the block at ``pos``.
 
-### bool:   world:getenvcolor
+### boolean:   world:getenvcolor
 ### Color3: world:getenvcolor
 
 ```lua
@@ -166,7 +166,7 @@ world:ismodified()
 
 Returns whether or not the world has been modified since loading.
 
-### bool: world:haserror
+### boolean: world:haserror
 
 ```lua
 world:haserror()
@@ -298,7 +298,7 @@ Sets the world's default texture pack.
 ### world:setinmemory
 
 ```lua
-world:setinmemory(bool: inMemory)
+world:setinmemory(boolean: inMemory)
 ```
 
 Sets the world's "inmemory" flag. If true, ``:load()`` and ``:save()`` calls will be ignored
@@ -306,7 +306,7 @@ Sets the world's "inmemory" flag. If true, ``:load()`` and ``:save()`` calls wil
 ### world:setignoremod
 
 ```lua
-world:setignoremod(bool: ignoreMod)
+world:setignoremod(boolean: ignoreMod)
 ```
 
 If true, prevents the WORLD_FLAG_MODIFIED flag from being set. This means that ``:save()`` calls will be ignored.

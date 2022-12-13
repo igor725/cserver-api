@@ -39,7 +39,7 @@ client:getping()
 ```
 
 ```lua
-client:getping(bool: average)
+client:getping(boolean: average)
 ```
 
 Returns the client's ping to the server. If passed argument is true, returns the client's average ping.
@@ -94,7 +94,7 @@ Returns the client's app name.
 
 For example: ``ClassiCube 1.3.1``, ``Vanilla Client`` etc.
 
-### bool: client:getposition
+### boolean: client:getposition
 
 ```lua
 client:getposition()
@@ -106,7 +106,7 @@ client:getposition(Vector: position)
 
 Returns or writes the client's position in the given vector.
 
-### bool: client:getrotation
+### boolean: client:getrotation
 
 ```lua
 client:getrotation()
@@ -170,7 +170,7 @@ client:getworld()
 
 Returns the world the client is currently on.
 
-### bool: client:islocal
+### boolean: client:islocal
 
 ```lua
 client:islocal()
@@ -178,7 +178,7 @@ client:islocal()
 
 Returns whether or not the client is local.
 
-### bool: client:isspawned
+### boolean: client:isspawned
 
 ```lua
 client:isspawned()
@@ -186,7 +186,7 @@ client:isspawned()
 
 Returns whether or not the client is spawned.
 
-### bool: client:isinsameworld
+### boolean: client:isinsameworld
 
 ```lua
 client:isinsameworld(Client: other)
@@ -194,14 +194,14 @@ client:isinsameworld(Client: other)
 
 Returns whether or not the client is in the same world as the ``other`` client.
 
-### bool: client:isfirstspawn
+### boolean: client:isfirstspawn
 
 ```lua
 client:isfirstspawn()
 ```
 Returns whether or not this is the client's first spawn.
 
-### bool: client:isinstate
+### boolean: client:isinstate
 
 ```lua
 client:isinstate(EClientState: state)
@@ -214,14 +214,14 @@ Returns whether or not the client is in a given EClientState.
 | 1     | CLIENT_STATE_MOTD     | Player is receiving the map   |
 | 2     | CLIENT_STATE_INGAME   | Player is in game             |
 
-### bool: client:isop
+### boolean: client:isop
 
 ```lua
 client:isop()
 ```
 Returns whether or not the client is OP.
 
-### bool: client:isbot
+### boolean: client:isbot
 
 ```lua
 client:isbot()
@@ -233,7 +233,7 @@ Returns whether or not the client is a bot.
 ### client:setop
 
 ```lua
-client:setop(bool: op)
+client:setop(boolean: op)
 ```
 
 Sets the client's OP status.
@@ -329,7 +329,7 @@ Sets a client's click distance.
 ### client:setblockperm
 
 ```lua
-client:setblockperm(int: blockID, bool: place, bool: break)
+client:setblockperm(int: blockID, boolean: place, boolean: break)
 ```
 
 Sets a client's block permissions.
@@ -408,18 +408,18 @@ The table should look like this:
 ```lua
 local hacks = {
     ["jumpheight"] = int: jumpHeight,
-    ["thirdperson"] = bool: allowThirdPerson,
-    ["spawncontrol"] = bool: allowSpawnControl,
-    ["speeding"] = bool: allowSpeeding,
-    ["noclip"] = bool: allowNoclip,
-    ["flying"] = bool: allowFlying
+    ["thirdperson"] = boolean: allowThirdPerson,
+    ["spawncontrol"] = boolean: allowSpawnControl,
+    ["speeding"] = boolean: allowSpeeding,
+    ["noclip"] = boolean: allowNoclip,
+    ["flying"] = boolean: allowFlying
 }
 ```
 
 ### client:setheldblock
 
 ```lua
-client:setheldblock(int: blockId, bool: force)
+client:setheldblock(int: blockId, boolean: force)
 ```
 
 Forces the client to hold a ``blockId``, and even locks it if ``force`` is true. For more information, please look at [CPE HeldBlock](https://wiki.vg/Classic_Protocol_Extension#HeldBlock)
