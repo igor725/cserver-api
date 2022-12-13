@@ -2,7 +2,7 @@
 
 ## Downloading the source
 
-To get started, create a new folder. In this folder you will clone the server, along with any plugins you want to use.
+To get started, create a new folder. 
 
 In this folder, clone the server software using along with any plugins you want.
 
@@ -75,5 +75,4 @@ You can run the server binary from ``./out/%SYSTEM ARCHITECTURE%/``.
 ## Notes
 
 * It is strongly recommended to recompile all plugins every time you update the server.
-* Igor's main OS is Windows 10, this means the Linux builds are not well tested.
 * By default, the server doesn't have many basic commands. Compile the [cs-base](https://github.com/igor725/cs-base) plugin for an expanded command set. 

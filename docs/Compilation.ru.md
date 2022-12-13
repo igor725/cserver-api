@@ -2,11 +2,11 @@
 
 ## Скачивание исходников
 
-Для начала необходимо создать папку. В эту папку Вы склонируете сервер, вместе со всеми плагинами, которые хотите использовать.
+Для начала необходимо создать папку. 
 
-In this folder, clone the server software using along with any plugins you want.
+В выбранную папку склонируйте сервер вместе с любыми плагинами которые хотите.
 
-For example, if you wanted the Lua plugin, you may use
+Например, если вам нужен Lua плагин, вы можете использовать:
 
 ```bash
 git clone https://github.com/igor725/cserver &&
@@ -14,7 +14,7 @@ git clone https://github.com/igor725/cs-base &&
 git clone https://github.com/igor725/cs-lua 
 ```
 
-If you ran the commands above, your folder structure should look like this:
+Когда вы введете команды выше, ваши папки будут расположены таким образом:
 
 ```
 ./server_src        - Root folder
@@ -22,47 +22,48 @@ If you ran the commands above, your folder structure should look like this:
     cs-lua/         - Lua plugin source
 ```
 
-## Compiling
+## Компиляция
 
-To actually compile the server software(along with any plugins you may want), ``cd`` into the ``cserver`` directory and use the ``build`` script.
+Чтобы скомпилировать сервер (с плагинами, если имеются), пропишите ``cd`` в директорию ``cserver``, и используйте скрипт ``build``.
 
-There are a number of arguments which can be passed to the build script:
+Ниже предоставлены аргументы, которые могут быть переданы в ``build`` скрипт:
 
-| Argument  | Description                                                           |
+| Аргумент  | Описание                                                              |
 |-----------|-----------------------------------------------------------------------|
-| cls       | Clear console window before compilation.                              |
-| upd       | Update server(or plugin) repository before compiling.                 |
-| dbg       | Build with debug symbols.                                             |
-| wall      | Enable all possible warnings.                                         |
-| wx        | Treat warnings as errors.                                             |
-| w0        | Disable all warnings.                                                 |
-| od        | Disable compiler optimizations.                                       |
-| san       | Add LLVM sanitizers.                                                  |
-| run       | Run the server after compilation                                      |
-| runsame   | Run the server after compilation in the same window (Windows Only)    |
-| noprompt  | Suppres zlib download prompt message (Windows Only)                   |
-| pb        | Build a plugin (More below)                                           |
+| cls       | Очистить терминал перед компиляцией                                   |
+| upd       | Обновить репозиторий сервера(или плагина) перед компиляцией           |
+| dbg       | Собрать с информацией для дебаггера                                   |
+| wall      | Включить всевозможные предупреждения.                                 |
+| wx        | Обработка предупрждений как ошибок.                                   |
+| w0        | Отключить все предупреждения.                                         |
+| od        | Выключить оптимизацию компилятора.                                    |
+| san       | Включить санитайзер адресов.                                          |
+| run       | Запустить сервер сразу после компиляции                               |
+| runsame   | Запустить сервер сразу после компиляции в этом же окне (Только Windows)|
+| noprompt  | Автоматически скачать zlib (Только для Windows)                       |
+| pb        | Скомпилировать плагин (Ниже подробности)                              |
 
-When using the ``pb`` argument, the script will build a plugin with the given name and arguments. The name must not include the ``cs-`` beginning of the plugin folder.
+C аргументом ``pb``, скрипт скомпилирует плагин с заданными ему именем и аргументами. Не указывайте
+имя начиная с ``cs-``. Например ``build pb lua``, вместо ``build pb cs-lua``.
 
-| Argument | Description                                    |
+| Аргумент | Описание                                       |
 |----------|------------------------------------------------|
-| install  | Copies the plugin to the ``plugins`` folder.   |
+| install  | Копирует плагин в папку ``plugins``.           |
 
-Plugins can define their own arguments, so it's recommended to look at the ``vars`` file.
+Плагины могут задавать свои собственные аргументы, поэтому рекомендуется смотреть ``vars`` файл.
 
-### cs-lua specific arguments
+### Аргументы cs-lua
 
 | Argument | Description                                                    |
 |----------|----------------------------------------------------------------|
-| jit2     | Prefer [LuaJIT 2](https://github.com/openresty/luajit2).       |
-| jit      | Prefer [LuaJIT](https://github.com/luajit/luajit).             |
-| 54       | Prefer [Lua 5.4](https://www.lua.org/ftp/lua-5.4.4.tar.gz).    |
-| 53       | Prefer [Lua 5.3](https://www.lua.org/ftp/lua-5.3.6.tar.gz).    |
-| 52       | Prefer [Lua 5.2](https://www.lua.org/ftp/lua-5.2.4.tar.gz).    |
-| 51       | Prefer [Lua 5.1](https://www.lua.org/ftp/lua-5.1.5.tar.gz).    |
+| jit2     | Выбрать [LuaJIT 2](https://github.com/openresty/luajit2).       |
+| jit      | Выбрать [LuaJIT](https://github.com/luajit/luajit).             |
+| 54       | Выбрать [Lua 5.4](https://www.lua.org/ftp/lua-5.4.4.tar.gz).    |
+| 53       | Выбрать [Lua 5.3](https://www.lua.org/ftp/lua-5.3.6.tar.gz).    |
+| 52       | Выбрать [Lua 5.2](https://www.lua.org/ftp/lua-5.2.4.tar.gz).    |
+| 51       | Выбрать [Lua 5.1](https://www.lua.org/ftp/lua-5.1.5.tar.gz).    |
 
-You can compile the server and lua plugin by running the following commands:
+Вы можете скомпилировать сервер и Lua плагин, используя следующие комманды:
 
 ```bash
 ./build upd &&
@@ -70,10 +71,9 @@ You can compile the server and lua plugin by running the following commands:
 ./build upd pb base install
 ```
 
-You can run the server binary from ``./out/%SYSTEM ARCHITECTURE%/``.
+Вы можете запустить бинарники сервера в ``./out/%SYSTEM ARCHITECTURE%/``.
 
-## Notes
+## Заметки
 
-* It is strongly recommended to recompile all plugins every time you update the server.
-* Igor's main OS is Windows 10, this means the Linux builds are not well tested.
-* By default, the server doesn't have many basic commands. Compile the [cs-base](https://github.com/igor725/cs-base) plugin for an expanded command set. 
+* Строго рекомендуется перекомпилировать все плагины каждый раз при обновлении сервера.
+* По умолчанию, сервер не имеет обширного количества базовых комманд. Скомпилируйте [cs-base](https://github.com/igor725/cs-base) плагин для расширения возможностей. 
