@@ -1,15 +1,21 @@
+site_dir: /usr/local/nginx/docs/cs-lua
 site_name: CServer Lua Plugin Documentation
+site_author: quadruple, igor725
+site_url: https://docs.igvx.ru/lua/
+repo_url: https://github.com/igor725/cserver-lua-api
+
 theme:
   name: material
-  palette: 
+  palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - scheme: slate 
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+
 markdown_extensions:
   - admonition
   - pymdownx.details
