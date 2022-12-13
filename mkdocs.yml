@@ -20,3 +20,16 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+
+plugins:
+  - i18n:
+      default_language: en
+      material_alternate: true
+      languages:
+        en:
+          name: English
+          build: true
+        ru:
+          site_name: Документация по Lua плагину для CServer
+          name: Russian
+          build: true
