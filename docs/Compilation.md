@@ -24,14 +24,14 @@ If you ran the commands above, your folder structure should look like this:
 
 ## Compiling
 
-To actually compile the server software(along with any plugins you may want), ``cd`` into the ``cserver`` directory and use the ``build`` script.
+To actually compile the server software (along with any plugins you may want), ``cd`` into the ``cserver`` directory and use the ``build`` script.
 
 There are a number of arguments which can be passed to the build script:
 
 | Argument  | Description                                                           |
 |-----------|-----------------------------------------------------------------------|
 | cls       | Clear console window before compilation.                              |
-| upd       | Update server(or plugin) repository before compiling.                 |
+| upd       | Update server (or plugin) repository before compiling.                |
 | dbg       | Build with debug symbols.                                             |
 | wall      | Enable all possible warnings.                                         |
 | wx        | Treat warnings as errors.                                             |

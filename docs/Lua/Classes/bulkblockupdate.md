@@ -5,15 +5,15 @@
 ### BulkBlockUpdate:setautosend
 
 ```lua
-bulkblockupdate:setautosend(boolean: autoSend)
+bulkblockupdate:setautosend(boolean: state)
 ```
 
-If true, BulkBlockUpdate packet will be sent when it overflows(over 256 calls to ``bulkblockupdate:add``).
+If true, BulkBlockUpdate packet will be sent when it overflows (over 256 calls to ``bulkblockupdate:add``).
 
 ### BulkBlockUpdate:setworld
 
 ```lua
-bulkblockupdate:setworld(World: worldObj)
+bulkblockupdate:setworld(World: wrld)
 ```
 
 Sets the World of the BulkBlockUpdate.

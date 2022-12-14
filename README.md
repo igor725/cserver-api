@@ -1,10 +1,15 @@
 # cserver-lua-api
 
-Unofficial API documentation for the [CServer](https://github.com/igor725/cserver) [Lua plugin](https://github.com/igor725/cs-lua/blob/main/src/luaclient.c)
+API documentation for the [CServer](https://github.com/igor725/cserver)
 
-You can find a compiled version of the docs at [cserver.skeets.cc](https://cserver.skeets.cc)
+Compiled version of the docs hosted at [docs.igvx.ru](https://docs.igvx.ru/)
 
-## MKDocs
-Install MKDocs (follow [this](https://www.mkdocs.org/user-guide/installation/) guide) and then run ``mkdocs serve`` in the cserver-lua-api folder.
+## Hosting own documentation
 
-You will see a local, real-time updating version of the docs at ``127.0.0.1:8000``
+First of all, you need to install mkdocs and some dependencies:
+```
+python3 -m pip install mkdocs mkdocs-material mkdocs-static-i18n
+```
+
+MkDocs comes with a built-in server that lets you preview the documentation. Make sure you're in the root directory of the repo, and then start the server by running `mkdocs serve` command. Now you can use printed in the console URL to open the documentation.
+For more information please read [Getting Started with MkDocs](https://www.mkdocs.org/getting-started/).

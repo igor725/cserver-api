@@ -5,7 +5,7 @@
 ### block:addtoworld
 
 ```lua
-block:addtoworld(World: worldObj, int: blockId)
+block:addtoworld(World: wrld, int: blockId)
 ```
 
 Adds the block to a world with a given block id.
@@ -13,7 +13,7 @@ Adds the block to a world with a given block id.
 ### block:undefine
 
 ```lua
-block:undefine(World: worldObj)
+block:undefine(World: wrld)
 ```
 
 Undefines the block from a given world.

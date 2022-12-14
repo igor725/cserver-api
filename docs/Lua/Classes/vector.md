@@ -105,7 +105,7 @@ local function command_func(caller, args)
 end
 ```
 
-### vector:toshort()
+### vector:toshort
 
 ```lua
 vector:toshort()
@@ -113,7 +113,7 @@ vector:toshort()
 
 Transforms a float vector into a short vector.
 
-### vector:tofloat()
+### vector:tofloat
 
 ```lua
 vector:tofloat()
@@ -121,7 +121,7 @@ vector:tofloat()
 
 Transforms a short vector into a float vector.
 
-### vector:min()
+### vector:min
 
 ```lua
 vector:min(Vector: vec1, Vector: vec2)
@@ -129,7 +129,7 @@ vector:min(Vector: vec1, Vector: vec2)
 
 Writes a new vector with the smallest values from the 2 source vectors.
 
-### vector:max()
+### vector:max
 
 ```lua
 vector:max(Vector: vec1, Vector: vec2)

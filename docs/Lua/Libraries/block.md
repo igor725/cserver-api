@@ -34,7 +34,7 @@ block.bulk()
 ```
 
 ```lua
-block.bulk([World: worldObj, boolean: autoSend])
+block.bulk([World: wrld, boolean: autoSend])
 ```
 
 Creates a new BulkBlockUpdate object. If given, will automatically set the world and/or autoSend.

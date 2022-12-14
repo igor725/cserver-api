@@ -51,13 +51,13 @@ config.error(configObj:poperror())
 
 ```lua
 function onStart()
-	mycfg = config.new{
+	mycfg = config.new {
 		name = 'mycfg.cfg',
 		items = {
 			{
-				name = 'my-key-i16',
-				type = CONFIG_TYPE_INT16,
-				comment = 'Signed short key',
+				name = 'my-key-int',
+				type = CONFIG_TYPE_INT,
+				comment = 'Signed int key',
 				default = -1
 			},
 			{

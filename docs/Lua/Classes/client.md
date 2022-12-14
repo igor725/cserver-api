@@ -422,7 +422,7 @@ local hacks = {
 client:setheldblock(int: blockId, boolean: force)
 ```
 
-Forces the client to hold a ``blockId``, and even locks it if ``force`` is true. For more information, please look at [CPE HeldBlock](https://wiki.vg/Classic_Protocol_Extension#HeldBlock)
+Forces the client to hold a ``bid``, and even locks it if ``force`` is true. For more information, please look at [CPE HeldBlock](https://wiki.vg/Classic_Protocol_Extension#HeldBlock)
 
 ### client:setorderblock
 
@@ -457,7 +457,7 @@ client:setvelocity(Vector: vel)
 ```
 
 ```lua
-client:setvelocity(Vector: vel, byte: mode)
+client:setvelocity(Vector: vel, int: mode)
 ```
 
 Applies velocity to a client.

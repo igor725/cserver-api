@@ -1,6 +1,6 @@
 # Color
 
-## Fields
+## Поля
 
 ### int: r
 
@@ -20,7 +20,7 @@ color.g
 color.b
 ```
 
-## Functions
+## Функции
 
 ### color:set
 
@@ -32,7 +32,7 @@ color:set(int: R, int: G, int: B)
 color:set(int: R, int: G, int: B, int: A)
 ```
 
-Sets the fields of a color.
+Устанавливает объекту Color указанные компоненты.
 
 ### color:get
 
@@ -40,4 +40,4 @@ Sets the fields of a color.
 color:get()
 ```
 
-Returns the fields of the color.
+Возвращает текущие значение цвета.

@@ -22,7 +22,7 @@ world.getbyname(string: worldName)
 ### world.iterall
 
 ```lua
-World.iterall(func: ITERATE_FUNCTION(World: worldObj))
+World.iterall(func: ITERATE_FUNCTION(World: wrld))
 ```
 
 Запускает итерацию по всем мирам, передавая каждый в ``ITERATE_FUNCTION()``.

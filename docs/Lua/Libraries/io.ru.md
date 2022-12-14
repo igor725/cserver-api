@@ -24,7 +24,7 @@ io.ensure(string: folder)
 
 Убеждается, что указанная папка существует.
 
-### string: io.datafolder()
+### string: io.datafolder
 
 ```lua
 io.datafolder()
@@ -32,7 +32,7 @@ io.datafolder()
 
 Возвращает путь до уникальной папки для хранения скриптом каких-либо данных.
 
-### string: io.scrname()
+### string: io.scrname
 
 ```lua
 io.scrname()

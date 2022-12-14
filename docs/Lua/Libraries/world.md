@@ -22,7 +22,7 @@ Returns a World object by its name.
 ### world.iterall
 
 ```lua
-World.iterall(func: ITERATE_FUNCTION(World: worldObj))
+World.iterall(func: ITERATE_FUNCTION(World: wrld))
 ```
 
 Iterates through all worlds, passing them to ``ITERATE_FUNCTION()``.

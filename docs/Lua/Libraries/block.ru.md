@@ -34,7 +34,7 @@ block.bulk()
 ```
 
 ```lua
-block.bulk([World: worldObj, boolean: autoSend])
+block.bulk([World: wrld, boolean: autoSend])
 ```
 
 Создаёт новый объект BulkBlockUpdate. Если указать первым параметром объект мира и/или вторым boolean автоотправки, то создастся настроенный объект.
