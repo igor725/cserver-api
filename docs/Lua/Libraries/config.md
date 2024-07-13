@@ -79,4 +79,4 @@ function onStart()
 end
 ```
 
-![Screenshot](/resources/mycfg.png)
+![Screenshot](../../resources/mycfg.png)

@@ -80,4 +80,4 @@ function onStop()
 end
 ```
 
-![Screenshot](/resources/testcmd.png)
+![Screenshot](../../resources/testcmd.png)

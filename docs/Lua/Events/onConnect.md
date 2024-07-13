@@ -3,7 +3,7 @@
 Fired on an incoming connection.
 
 !!! warning
-    The client is not fully initialized at this point. For a more complete client, use [onHandshake](/Lua/Events/onHandshake)
+    The client is not fully initialized at this point. For a more complete client, use [onHandshake](onHandshake.md)
 
 !!! note
     Returning ``false`` here will close the connection to the client. 

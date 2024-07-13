@@ -49,7 +49,7 @@ cs_bool Client_ChangeWorld(Client *client, World *world);
 
 ### Client_Chat
 
-Отправляет игроку сообщение указанного [типа](../../Types/#emesgtype).
+Отправляет игроку сообщение указанного [типа](../Types.md#emesgtype).
 
 !!! note
 	Типы сообщений определяются расширением классического протокола (CPE), если игрок использует клиент без CPE, то сообщение при любом параметре `type` будет показано **в чате**!
@@ -82,7 +82,7 @@ void Client_KickFormat(Client *client, cs_str format, ...);
 Отправляет игроку CPE пакет обновления окружения (погода, цвета, текстурпак и другие параметры)
 
 !!! warning
-	Не рекомендуется использовать данную функцию вручную, работу можно предоставить [этой функции](../Modules/World/#world_finishenvupdate), она автоматически отправит пакет всем клиентам, которые находятся в указанном мире.
+	Не рекомендуется использовать данную функцию вручную, работу можно предоставить [этой функции](World.md#world_finishenvupdate), она автоматически отправит пакет всем клиентам, которые находятся в указанном мире.
 
 ```c++
 void Client_UpdateInfo(Client *client, World *world, cs_bool updateAll);
@@ -98,7 +98,7 @@ void Client_Update(Client *client);
 
 ### Client_SendHacks *
 
-Отправляет изменения [чит-параметров](../../Types/#cpehacks) указанному игроку.
+Отправляет изменения [чит-параметров](../Types.md#cpehacks) указанному игроку.
 
 ```c++
 cs_bool Client_SendHacks(Client *client, CPEHacks *hacks);
@@ -106,7 +106,7 @@ cs_bool Client_SendHacks(Client *client, CPEHacks *hacks);
 
 ### Client_NewSelection
 
-Данная функция создаёт область выделения для указанного клиента. Функции для изменения параметров выделенной области описаны [здесь](../CPE/#cpecuboid).
+Данная функция создаёт область выделения для указанного клиента. Функции для изменения параметров выделенной области описаны [здесь](CPE.md).
 
 !!! warning
 	Если клиент не поддерживает CPE дополнение SelectionCuboid, функция вернёт NULL!
@@ -154,7 +154,7 @@ cs_bool Client_TeleportToSpawn(Client *client);
 
 ### Client_CheckState
 
-Проверяет, находится ли клиент в [указанном состоянии](../Types/#eclientstate).
+Проверяет, находится ли клиент в [указанном состоянии](../Types.md#eclientstate).
 
 ```c++
 cs_bool Client_CheckState(Client *client, EClientState state);
