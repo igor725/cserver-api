@@ -1,7 +1,7 @@
-site_dir: /usr/local/nginx/docs/
+site_dir: /usr/local/nginx/docs/cserver
 site_name: CServer API Documentation
 site_author: quadruple, igor725
-site_url: https://docs.igvx.ru/
+site_url: https://docs.igvx.ru/cserver
 repo_url: https://github.com/igor725/cserver-lua-api
 
 theme:
@@ -26,13 +26,13 @@ markdown_extensions:
 
 plugins:
   - i18n:
-      default_language: en
       material_alternate: true
       languages:
-        en:
+        - locale: en
           name: English
           build: true
-        ru:
+          default: true
+        - locale: ru
           site_name: Документация по CServer API
           name: Russian
           build: true
